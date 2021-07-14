@@ -10,4 +10,15 @@
 .translator-container__textarea {
   display: block;
   margin: 2rem auto;
+  width: 85vw;
+  max-width: 85vw;
+  max-height: 50vh;
+  overflow: scroll;
+  resize: vertical;
 }
+
+// @media only screen and (min-device-width: 340px) and (max-device-width: 667px) {
+//   .translator-container__textarea {
+//     width: 320px;
+//   }
+// }
