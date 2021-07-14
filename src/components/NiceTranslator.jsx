@@ -4,9 +4,9 @@ const NiceTranslator = () => {
   const [counter, setCounter] = useState(0);
 
   return (
-    <div>
+    <div className="translator-container">
+      <textarea className="translator-container__textarea"></textarea>
       <button onClick={() => setCounter(counter + 1)}>Add to Counter</button>
-      <br></br>
       <p>{counter}</p>
     </div>
   );
