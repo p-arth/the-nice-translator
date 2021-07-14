@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const NiceTranslator = () => {
@@ -20,7 +20,7 @@ const NiceTranslator = () => {
 
   return (
     <div className="translator-container">
-      <h1>The Nice Translator App</h1>
+      <h1>The Nice Translator</h1>
       <textarea
         className="translator-container__textarea"
         placeholder="Type your text in english right here..."
