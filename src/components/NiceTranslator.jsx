@@ -7,6 +7,10 @@ const NiceTranslator = () => {
     setEnglishText(event.target.value);
   };
 
+  const handleTranslateClick = () => {
+    console.log(englishText);
+  };
+
   return (
     <div className="translator-container">
       <h1>The Nice Translator App</h1>
@@ -15,8 +19,11 @@ const NiceTranslator = () => {
         placeholder="Type your text in english right here..."
         value={englishText}
         onChange={handleTextChange}></textarea>
-      <button onClick={() => console.log(englishText)}>Print Text</button>
-      <p>{englishText}</p>
+      <button className="translator-container__button" onClick={() => handleTranslateClick()}>
+        Translate
+      </button>
+      <h3>Translated text:</h3>
+      <p>{englishText ? englishText : 'No text translated yet'}</p>
     </div>
   );
 };
