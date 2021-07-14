@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const NiceTranslator = () => {
   const [englishText, setEnglishText] = useState('');
+  const [languageOption, setLanguageOption] = useState('');
 
   const handleTextChange = (event) => {
     setEnglishText(event.target.value);
   };
 
+  const handleOptionChange = (event) => {
+    setLanguageOption(event.target.value);
+  };
+
   const handleTranslateClick = () => {
     console.log(englishText);
+    console.log(languageOption);
   };
 
   return (
@@ -19,6 +26,11 @@ const NiceTranslator = () => {
         placeholder="Type your text in english right here..."
         value={englishText}
         onChange={handleTextChange}></textarea>
+      <select className="translator-container__select" value={languageOption} onChange={handleOptionChange}>
+        <option value="german">German</option>
+        <option value="portuguese">Portuguese</option>
+        <option value="dutch">Dutch</option>
+      </select>
       <button className="translator-container__button" onClick={() => handleTranslateClick()}>
         Translate
       </button>
