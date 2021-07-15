@@ -15,6 +15,7 @@
   max-height: 50vh;
   overflow: scroll;
   resize: vertical;
+  padding: 0.75rem;
 }
 
 .translator-container__select {
@@ -22,6 +23,9 @@
   margin: 0 auto 2rem;
   padding: 0.4rem 0.2rem;
   border-radius: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .translator-container__button {
@@ -39,4 +43,12 @@
     background-color: #584a9b;
     transition: 0.2s;
   }
+}
+
+.translator-container__box {
+  margin: auto;
+  background-color: #ffe8a3;
+  width: 75vw;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
